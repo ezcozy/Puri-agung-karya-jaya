@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Puri Agung Karya Jaya | Perumahan KPR Subsidi",
@@ -14,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className="antialiased">{children}</body>
+      <body className={`${playfair.variable} ${inter.variable} antialiased font-sans`}>
+        {children}
+      </body>
     </html>
   );
 }

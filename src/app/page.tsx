@@ -1,3 +1,5 @@
+const BASE_PATH = "/Puri-agung-karya-jaya";
+
 export default function Home() {
   const waNumber = "6281178279880"; // +62 811-7827-988
   const waMessage = encodeURIComponent(
@@ -11,7 +13,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/logo.jpg" alt="Puri Agung Karya Jaya" className="h-10 w-10 rounded-full object-cover" />
+            <img src={`${BASE_PATH}/logo.jpg`} alt="Puri Agung Karya Jaya" className="h-10 w-10 rounded-full object-cover" />
             <span className="font-bold text-sm sm:text-base text-emerald-900 leading-tight">
               PURI AGUNG<br className="sm:hidden" /> <span className="hidden sm:inline">KARYA JAYA</span>
             </span>
@@ -42,7 +44,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src={`${BASE_PATH}/hero-video.mp4`} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
@@ -88,7 +90,7 @@ export default function Home() {
           </div>
           <div className="grid sm:grid-cols-2 gap-8 items-center">
             <img
-              src="/gerbang.jpg"
+              src={`${BASE_PATH}/gerbang.jpg`}
               alt="Gerbang Perumahan Puri Agung Karya Jaya"
               className="rounded-2xl shadow-lg w-full h-64 sm:h-96 object-cover"
             />
@@ -125,7 +127,7 @@ export default function Home() {
 
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden grid sm:grid-cols-2">
             <img
-              src="/rumah-contoh.jpg"
+              src={`${BASE_PATH}/rumah-contoh.jpg`}
               alt="Contoh Rumah Tipe 36"
               className="w-full h-64 sm:h-full object-cover"
             />
@@ -171,7 +173,7 @@ export default function Home() {
               Denah Rumah Tipe 36
             </h4>
             <img
-              src="/denah-type36.jpg"
+              src={`${BASE_PATH}/denah-type36.jpg`}
               alt="Denah Rumah Tipe 36"
               className="rounded-xl w-full max-w-md mx-auto"
             />

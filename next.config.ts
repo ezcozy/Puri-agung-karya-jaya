@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  basePath: "/Puri-agung-karya-jaya",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

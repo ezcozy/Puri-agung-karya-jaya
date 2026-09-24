@@ -24,6 +24,8 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - name: Use uploaded hero video
+        run: cp IMG_3958.MOV public/hero-video.mp4
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

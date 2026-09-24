@@ -2,7 +2,7 @@ import { ArrowDown, ArrowUpRight, Check, MapPin, WhatsappLogo } from "@phosphor-
 import { HeroReveal, HeroVideo, Reveal } from "@/components/reveal";
 
 const BASE = "/Puri-agung-karya-jaya";
-const number = "6281178279880";
+const number = "628117827988";
 const message = encodeURIComponent("Halo, saya tertarik dengan Puri Agung Karya Jaya tipe 36 KPR subsidi. Mohon info lebih lanjut.");
 const whatsapp = `https://wa.me/${number}?text=${message}`;
 

@@ -1,5 +1,5 @@
 import { ArrowDown, ArrowUpRight, Check, MapPin, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
-import { HeroReveal, Reveal } from "@/components/reveal";
+import { HeroReveal, HeroVideo, Reveal } from "@/components/reveal";
 
 const BASE = "/Puri-agung-karya-jaya";
 const number = "6281178279880";
@@ -15,7 +15,7 @@ export default function Home() {
     </header>
 
     <section id="awal" className="hero">
-      <video autoPlay muted loop playsInline poster={`${BASE}/gerbang.jpg`}><source src={`${BASE}/hero-video.mp4`} type="video/mp4"/></video>
+      <HeroVideo src={`${BASE}/hero-video.mp4`} poster={`${BASE}/gerbang.jpg`} />
       <div className="hero-shade"/>
       <HeroReveal className="hero-copy">
         <p className="eyebrow light">Hunian KPR Subsidi Â· Palembang</p>

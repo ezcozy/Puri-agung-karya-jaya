@@ -24,8 +24,14 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - name: Use uploaded hero video
-        run: cp IMG_3958.MOV public/hero-video.mp4
+      - name: Convert uploaded hero video for the web
+        run: >
+          ffmpeg -y -i IMG_3958.MOV
+          -map 0:v:0 -map 0:a:0?
+          -c:v libx264 -preset medium -crf 22 -pix_fmt yuv420p
+          -c:a aac -b:a 192k
+          -movflags +faststart
+          public/hero-video.mp4
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
